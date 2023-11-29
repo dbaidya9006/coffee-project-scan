@@ -1,5 +1,6 @@
 name: Security Scan
 
+# commit to see if this works
 on:
   workflow_run:
     workflows: ["install-docker"]
