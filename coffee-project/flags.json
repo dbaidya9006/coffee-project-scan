@@ -1,0 +1,7 @@
+{
+  "endpoints": {
+    "order": true,
+    "coffees": true,
+    "orders": true
+  }
+}

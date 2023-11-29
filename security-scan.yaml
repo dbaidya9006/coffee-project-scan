@@ -1,0 +1,26 @@
+name: Security Scan
+
+on:
+  workflow_run:
+    workflows: ["install-docker"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+
+    - name: Scan for security issues
+      uses: microsoft/DevSkim-Action@v1
+      with:
+        directory-to-scan: coffee-project/
+
+    - name: Create results file
+      uses: github/codeql-action/upload-sarif@v2
+      with:
+        sarif_file: devskim-results.sarif
+        
