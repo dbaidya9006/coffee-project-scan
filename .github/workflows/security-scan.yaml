@@ -5,6 +5,8 @@ on:
     workflows: ["Install Docker"]
     types:
       - completed
+    branches:
+      - release
 
 jobs:
   deploy:
