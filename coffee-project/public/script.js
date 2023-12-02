@@ -1,3 +1,5 @@
+// TODO migrate as much of this to HTMX as possible
+// const axios = require("axios/dist/browser/axios.cjs");
 
 // example token request
 //> POST /token HTTP/1.1
